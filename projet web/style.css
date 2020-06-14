@@ -1,0 +1,657 @@
+#accueil {
+background: url("bg.png") no-repeat center fixed;
+background-size: cover;
+width: 100%;
+margin-left: 0;
+margin-top: 0;
+margin-bottom: 0;
+font-family: "Comforta", serif;
+}
+
+
+#HM1 {
+background: url("HMbackground.jpg") no-repeat center fixed;
+background-size: cover;
+width: 100%;
+margin-left: 0;
+margin-top: 0;
+margin-bottom: 0;
+font-family: "Comforta", serif;
+}
+
+#HM2
+{
+background: url("HM2background.jpg") no-repeat center fixed;
+background-size: cover;
+width: 100%;
+margin-left: 0;
+margin-top: 0;
+margin-bottom: 0;
+font-family: "Comforta", serif;
+
+}
+
+.jeux
+{
+	background: #000000;
+	text-align: center;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+@media (min-width : 1000px ){
+}
+
+
+table
+{
+	margin: auto;
+	background-color:#5C393B ;
+}
+
+#table2
+{
+margin: auto;
+background-color: #220243 ;
+}
+
+td
+{
+	background-color: #E68F38;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: justify;
+}
+
+.td2
+{
+background-color: #9e3185
+}
+
+section
+{
+display: flex;
+margin-bottom: 20px;
+}
+
+article, aside
+{
+text-align: justify;
+}
+
+article
+{
+margin-right: 20px;
+flex: 4;
+position: relative;
+background-color : #E68F38;
+box-shadow: 0px 2px 5px 2px black;
+border-radius: 5px;
+padding: 10px;
+font-size: 0.9em;
+margin-top: 0px;
+-webkit-box-shadow: 0px 2px 5px 2px black;
+}
+
+#article2
+{
+margin-right: 20px;
+flex: 4;
+position: relative;
+background-color : #9e3185 ;
+box-shadow: 0px 2px 5px 2px black;
+border-radius: 5px;
+padding: 10px;
+font-size: 0.9em;
+margin-top: 0px;
+-webkit-box-shadow: 0px 2px 5px 2px black;
+}
+
+
+#pres
+{
+margin-right: 20px;
+flex: 4;
+position: relative;
+background-color : #000000;
+box-shadow: 0px 2px 5px 2px black;
+border-radius: 5px;
+padding: 20px;
+font-size: 1em;
+color: #FFFFFF;
+margin-top: 50px;
+-webkit-box-shadow: 0px 2px 5px 2px black;
+}
+
+aside
+{
+flex: 1.2;
+position: relative;
+background-color: #E68F38;
+box-shadow: 0px 2px 5px 2px #1c1a19;
+border-radius: 5px;
+padding-top: 10px;
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 10px;
+font-size: 0.9em;
+-webkit-box-shadow: 0px 2px 5px 2px #1c1a19;
+}
+
+#aside2
+{
+flex: 1.2;
+position: relative;
+background-color: #9e3185;
+box-shadow: 0px 2px 5px 2px #1c1a19;
+border-radius: 5px;
+padding-top: 10px;
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 10px;
+font-size: 0.9em;
+-webkit-box-shadow: 0px 2px 5px 2px #1c1a19;
+}
+
+{
+border: thick;
+}
+
+
+.logo {
+margin: 20px ;
+}
+
+
+/* MENU DU HAUT */
+
+header
+{
+
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+
+ul {
+padding:0;
+margin:0;
+list-style-type:none;
+}
+
+ul li a {
+display:block;
+float:left;
+width:auto;
+/*background-color:#6495ED;*/
+color:black;
+text-decoration:none;
+text-align:center;
+padding:5px;
+border:2px solid;
+
+/*border-color:#DCDCDC #696969 #696969 #DCDCDC;*/
+}
+#menu-deroulant, #menu-deroulant ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+#menu-deroulant {
+/* on centre le menu dans la page */
+text-align: center;
+width:47%;
+margin-right:3%;
+}
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+display: inline-block;
+margin-top: 2rem;
+
+}
+#menu-deroulant ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+display: inherit;
+background-color: #6495ED;
+}
+#menu-deroulant a {
+text-decoration: none;
+display: block;
+color:white;
+}
+#menu-deroulant ul {
+position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+left: -999em;
+text-align: left;
+z-index: 1000;
+}
+#menu-deroulant li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+left: auto;
+}
+#titre_principal
+{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width:100%;
+}
+
+
+#bloc_page
+{
+width: 95%;
+margin: auto;
+}
+
+
+#logo
+{
+display: flex;
+flex-direction: row;
+align-items: baseline;
+position:fixed;
+background:black;
+width:inherit;
+z-index:999;
+}
+
+h1
+{
+font-weight: normal;
+text-transform: uppercase;
+margin-right: 250px;
+margin-left: 15px;
+}
+
+#LBEM{
+color:white;
+font-family: "Heroes Assemble", serif;
+/*margin-right: 30%;*/
+margin-left: 3%;
+width:47%;
+}
+
+
+#subtitle{
+color:white;
+margin-left:3%
+}
+
+/* FOOTER */
+
+#footerLBEM{
+color:white;
+font-family: "Heroes Assemble", serif;
+font-size: xx-large;
+padding-top:1em;
+}
+
+#social{
+width:30%;
+}
+
+#tablefooter{
+table-layout: fixed ;
+}
+#tablefooter td{
+width: 25%;
+}
+
+footer
+{
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	background-color: black;
+}
+footer table{
+	background-color: inherit;
+	width:100%;
+	text-align: center;
+}
+
+footer table td{background-color:black;}
+footer table td a{ text-decoration:none; color:white;}
+
+/* POLICES */
+
+@font-face {
+font-family: "Heroes Assemble";
+src: url("heroesassembleital2.ttf");
+}
+
+@font-face {
+font-family: "Comforta";
+src: url("Comfortaa-Regular.ttf");
+}
+
+@font-face {
+font-family: "Shoguns";
+src: url("Shoguns Clan.ttf");
+}
+
+
+
+video{
+display: block;
+margin: 0 auto;
+}
+
+
+/* LECTEUR DE MUSIQUE */
+#music{
+	background-color:black;
+	color:white;
+	margin:auto;
+	width:40%;
+	border-radius: 25px;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+}
+#player{
+	display:flex;
+	margin-left: 10%;
+	align-items: center;
+}
+#currentSong{
+	margin-left: 5%
+}
+
+.playlisttable{background-color: black}
+
+	table.playlisttable td{
+		background-color: inherit;
+		color:white;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+.toolBtn{
+	border-radius:25px;
+	width: 40px;
+	height: 40px;
+	border-color: white;
+	background: black;	
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.bigBtn{
+	width: 60px;
+	height: 60px;
+	border-radius: 100px;
+	margin-right: 1em;
+}
+
+.playBtn{
+	background-image: url("Pics/play.png");
+	background-position: 55% 40%;
+}
+
+.pauseBtn{
+	background-image: url("Pics/pause.png");
+	background-position: 55% 40%;
+}
+
+.stopBtn{
+	background-image: url("Pics/stop.png");
+	background-position: 55% 45%;
+}
+
+/*MENU DEROULANT PERSONNAGE*/
+
+* {box-sizing: border-box}
+
+.Diapo {
+position: relative;
+}
+
+.Slides {
+	font-family: "Comforta", serif;
+	display: none;
+	text-align: center;
+	width: auto;
+	height: auto;
+	position:relative;
+	background: #AFAFAF;
+	margin-bottom: 5%;
+	padding: 2em 2em 2em 2em;
+	border-radius: 50px;	
+}
+
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -30px;
+padding: 16px;
+color: #888;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+.next {
+position: absolute;
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+color: white;
+}
+
+.slidesTitle{
+	font-family: "Shoguns", serif;
+	font-size: xxx-large;
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.navBtn{
+	border-radius:25px;
+	width: 20px;
+	height: 20px;
+	margin-right: 1%;
+	border: none;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-color: transparent; 
+}
+
+.unselectedBtn{
+	background-image: url("Pics/notselected.png");
+	background-position: 55% 40%;
+}
+
+.selectedBtn{
+	background-image: url("Pics/selected.png");
+	background-position: 55% 40%;
+}
+
+
+
+/*Armel*/ 
+    #GW1
+{
+    font-family: "Comforta", serif;
+    background: url(images/background1.jpg) no-repeat center fixed ;
+    background-size: cover; 
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+
+    
+
+}
+
+
+#GW2
+{
+    font-family: "Comforta", serif;
+    background: url(images/background.jpg) no-repeat ;
+    background-size: cover; 
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+}
+
+.section1
+{
+	padding-top: 50px;
+    margin-left:470px ;
+width}
+
+.image
+{align-content: justify;}
+.section2
+{
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    border: solid 1px white;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.tableau1
+{
+    background-image: url(images/prof1.png);
+}
+
+.tableau2 
+{
+    background-image: url(images/races.jpg);
+    color: black;
+    
+}
+
+.monde, .heros, .histoire
+{
+    background-color: firebrick;
+}
+
+#MHT
+{
+background: url("https://i.imgur.com/1r2epTd.jpg") no-repeat center fixed;
+background-size: cover;
+width: 100%;
+margin-left: 0;
+margin-top: 0;
+margin-bottom: 0;
+font-family: "Comforta", serif;
+}
+
+#MHW
+{
+background: url("https://www.actugaming.net/wp-content/uploads/2017/08/monster-hunter-worlds-gamescom-12.jpg") no-repeat center fixed;
+background-size: cover;
+width: 100%;
+margin-left: 0;
+margin-top: 0;
+margin-bottom: 0;
+font-family: "Comforta", serif;
+}
+
+
+/* jeu js */
+
+
+.Snake_Header {
+	margin-bottom:2px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:9pt;
+	background-color: #FFFFC4;
+	border: 1px solid #999999;
+	height:20px;
+	padding-top:4px;
+	padding-left:3px;
+	color: #0066CC;
+	text-align:left;
+}
+
+.Snake_Game {
+	position: relative;
+	left:0;
+	top:0;
+	border: 2px solid #000000;
+	background-color: #DFF3FF;
+	font-family: "Comic Sans MS";
+	font-size: 10px;
+	color: #006699;
+	overflow: auto;
+	text-align:left;
+}
+
+.Snake_Controles {
+	height:40px;
+	border: 1px solid green;
+	margin-top: 1px;
+	background-color:#CCCCCC;
+	padding-left: 3px;
+	padding-bottm: 2px;
+	font-family:"Comic Sans MS";
+	font-size:7pt;
+	text-align:left;
+}
+
+.Snake_menu_speed {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border: 1px solid #666666;	
+	margin-right: 2px;
+}
+
+.Snake_bouton_jouer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border: 1px outset #444444;	
+	margin-right: 2px;
+	cursor: hand;
+	width: 95px;
+	font-weight:bold;
+	background-color:#FFDFDF;
+}
+
+.Snake_bouton_aide {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border: 1px outset #444444;
+	margin-right: 2px;
+	width: 20px;
+	font-weight:bold;
+	cursor: hand;
+	color:#003399;
+	background-color: #00CC99;
+}
+
+#snake
+{
+background: url("bg.png") no-repeat center fixed;
+background-size: cover;
+width: 100%;
+margin-left: 0;
+margin-top: 0;
+margin-bottom: 0;
+font-family: "Comforta", serif;
+}
+
+
