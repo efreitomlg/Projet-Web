@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LBEM - Jeu JS de fou</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="common.js"></script>
+</head>
+
+
+
+<body id="snake" onscroll="scrollTitleManagement()" onload="jsPageOnLoad()">
+
+    <header>
+        <div id="titre_principal">
+            <div id="logo">
+
+                <h1 id="LBEM">La Baraque des Enfants Maudits</h1>
+                <ul id="menu-deroulant">
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="#">Guild Wars</a>
+                        <ul>
+                            <li><a href="gw1.html">Guild Wars 1</a></li>
+                            <li><a href="gw2.html">Guild Wars 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Monster Hunter</a>
+                     <ul>
+                        <li><a href="Monster Hunter Tri.html">Monster Hunter Tri</a></li>
+                        <li><a href="Monster Hunter World.html">Monster Hunter World</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Hotline Miami</a>
+                 <ul>
+                    <li><a href="hotline miami.html">Hotline Miami 1</a></li>
+                    <li><a href="hotline miami 2.html">Hotline Miami 2</a></li>
+                </ul>
+            </li>
+            <li><a href="Jeu js de fou.html">Jeu JS de fou</a></li>
+        </ul>
+    </div>
+</div>
+</header>
+
+<div id="bloc_page" style="padding-bottom: 5%;">
+    <section style="margin-top: 50px">
+        <article class="pres" style="margin-top:10%">
+            <h2 class="Jeu"  >Bienvenue !</h2>
+            <p>Bien le bonjour visiteur.<br> Suite à incident de "créativité extrême" de la part d'un de nos fondateurs, l'équîpe a perfectionné cette page pour vous permettre de modifier légérement le contenu de ce site ! Le principe est le suivant: 1 vous choissisez l'API qui vous intéresse, 2 vous choissisez un sujet qui vous intéresse dans cette API, 3 vous affichez librement ces données sous la forme qui vous sied! Enfin votre contenu est également en mouvement selon vos désirs dans les espaces existants de la page. Désolé de l'incident nous espérons que cette nouvelle version vous comblera !</p>
+        </article>
+    </section>
+
+    <section style="margin: auto; width:60%">
+        <article class="pres"> 
+            <h2 class="Jeu">Choix  de l'affichage</h2>
+            <div style="margin-right: 1em; margin-bottom: 1em;padding: inherit">
+                <label for="apis" style="margin-right: 2em">Quel sujet vous intéresse ?</label>
+                <select name="apis" id="apis" onchange="apiChoice()">
+                    <option id="default" selected>Veuillez choisir</option>
+                    <option id="dd">Donjons et Dragons</option>
+                    <option id="got">Game of Thrones</option>
+                    <option id="bb">Breaking Bad</option>
+                </select>
+            </div>
+            <div id = "apiForm" style="display:none;margin-right: 1em; margin-bottom: 1em;padding: inherit">
+                <div style="margin-right: 2em; margin-bottom: 1em">Quelle catégorie ?</div>
+                <div id="apiOptions" style="display: flex;justify-content: center;" >                    
+                </div>
+                <button  class="butform" type="button" id="submit" onclick="radioLoad()">Charger...</button>
+                <div id="apiSubForm" style="display:none; text-align: center;margin-top: 5%;">
+                    <div>
+                        <div style="margin-right: 2em; margin-bottom: 1em">Entités :</div>
+                        <select id="entities" multiple style="width: 50%;margin-bottom: 5%;min-height: 300px">
+                                 
+                        </select>
+                    </div>
+                    <div>
+                        <label for="apis" style="margin-right: 2em">Méthode d'affichage :</label>
+                        <select name="dispChoice" id="dispChoice" disabled="true">
+                            <option id="table">Tableau</option>
+                        </select>
+                    </div>
+                    <button type="button" id="submit" onclick="displayData()" class="butform">C'est parti !</button>
+                    <span style="display: none" id="error">10 valeurs maximum svp.</span>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>
+
+
+<div class="case_libre" id="case_1">
+    <div class="utilisateur" id="results" draggable="true" style="display: none">
+    </div>
+</div>
+<div class="case_libre" id="case_2"></div>
+<div class="case_libre" id="case_3"></div>
+
+
+
+<!-- 
+<main class="element">
+
+    <table id="tableau" width="80%" border="1" cellspacing="3" cellpadding="1">
+      <tbody>
+        <tr>
+          <th scope="col">Pseudo</th>
+          <th scope="col">Email</th>
+          <th scope="col">Commentaire</th>
+          <th scope="col">Jeu</th>
+      </tr>
+  </tbody>
+</table>
+
+</main>
+</div>
+-->
+
+
+</body>
+
+
+<footer>
+    <h3 id="footerLBEM">La Baraque des Enfants Maudits</h3>
+    <table id="social">
+        <tr>
+            <td> <a href='https://www.facebook.com/Efrei/'><img src='Footer/facebook.png' height="30" /></a></td>
+            <td> <a href='https://twitter.com/Efrei_Paris?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'><img src='Footer/twitter.png' height="30" /></a></td>
+            <td> <a href='https://www.instagram.com/efrei_paris/?hl=fr'><img src='Footer/insta.png' height="30" /></a></td>
+            <td> <a href='https://www.linkedin.com/school/efrei-paris/'><img src='Footer/linkedin.png' height="30" /></a></td>
+        </tr>
+    </table>
+
+    <table id="tablefooter">
+        <tr>
+            <td><a href='https://www.efrei.fr/'>Qui sommes-nous?</a></td>
+            <td><p>Crédits</p></td>
+            <td><p>Images trouvées sur internet</p></td>
+            <td><a href="#">Haut de page</a></td>
+        </tr>
+    </table>
+</footer>
+
+</html>
+
+<script type="text/javascript">
+    function scrollTitleManagement(){
+
+        var logo = document.getElementById('logo');
+        if(window.scrollY > 0){
+            logo.style.opacity = 0.5;
+        }
+        else{
+            logo.style.opacity = 1;
+        }
+    }
+
+function jsPageOnLoad(){
+
+    api_list = document.getElementById("apis");
+    api_list.selectedIndex = 0;
+}
+
+var ApiInfos = [];
+
+// 1 ligne = [Id de l'Api, url, [[Option i, Syntaxe de l'appel pour i, informations à récupérer pour i]]
+var ApiTable = [
+            ["dd", "https://www.dnd5eapi.co/api/",[["Monstres","monsters","name,size,type,alignment"],["Sortilèges","spells",'name,range,duration,material']]],
+            ["got", "https://anapioficeandfire.com/api/",[["Maisons","houses",'name,region,coatOfArms'],["Livres","books","name,isbn,numberOfPages,released"]]],
+            ["bb","https://www.breakingbadapi.com/api/",[["Personnages","characters","name,nickname,portrayed"],["Citations","quotes","quote,author,series"],["Épisodes","episodes","title,season,episode,air_date"]]] 
+            ];
+
+function apiChoice(){
+
+    var api_list = document.getElementById("apis");
+    var apiOptions = document.getElementById("apiOptions"); 
+    var apiForm = document.getElementById("apiForm");
+    var apiSubForm = document.getElementById("apiSubForm");
+    var dispChoice = document.getElementById("dispChoice");
+
+    apiOptions.innerHTML = "";
+    apiForm.style.display = "none";
+    apiSubForm.style.display = "none";
+
+    if(api_list.selectedIndex > 0){
+        api_id = api_list.selectedOptions[0].id;
+        apiTableSearch(api_id);
+
+        for(var j = 0; j < ApiInfos[2].length; j++){
+
+            input = document.createElement("input");
+            label = document.createElement("label");
+            p = document.createElement("p");
+            
+            input.type = "radio";
+            input.name = "options"
+            input.id = ApiInfos[2][j][1];
+            input.value = ApiInfos[2][j][1];
+            input.addEventListener("onchange", radioChange());
+            label.for = ApiInfos[2][j][1];
+            label.textContent = ApiInfos[2][j][0];
+
+            if(j == 0){ 
+                input.checked = true; 
+            }
+            else{
+                input.checked = false;
+            }
+            p.classList.add("par_rad")
+            p.appendChild(input);
+            p.appendChild(label);
+            apiOptions.appendChild(p);
+            apiForm.style.display = "block";
+        }
+    }
+}
+
+function apiTableSearch(id){
+
+    ApiInfos = [];
+    i = 0;
+    while(ApiInfos.length == 0){
+        if(i >= ApiTable.length){ break; }
+        else if(ApiTable[i][0] == id){
+            ApiInfos = ApiTable[i];
+        }
+        i++;
+    }
+}
+
+function radioChange(){
+    
+    var apiSubForm = document.getElementById("apiSubForm");
+    apiSubForm.style.display = "none";
+}
+
+function radioLoad(){
+
+    var dispChoice = document.getElementById("dispChoice");
+    var apiOptions = document.getElementById("apiOptions"); 
+    var apiSubForm = document.getElementById("apiSubForm");
+    inputs = apiOptions.getElementsByTagName("input");
+    var entities = document.getElementById("entities");
+    entities.innerHTML = "";
+
+    pars = [];
+    url = "";
+
+    for(var i = 0; i < inputs.length; i++){
+        if (inputs[i].checked){
+            pars = ApiInfos[2][i];
+            url = ApiInfos[1];
+            break;
+        }
+    }
+
+    fetch(url + pars[1])
+    .then(response => response.json())                                         
+    .then(function (data) {
+            switch(ApiInfos[0]){
+                case "dd":    
+                    for(var i=0; i < data.results.length; i++){
+                        option = document.createElement("option");                    
+                        option.id = data.results[i].index;
+                        option.textContent = data.results[i].name;
+                        entities.appendChild(option);
+                    }
+                    break;
+                case "got":
+                    for(var i=0; i < data.length; i++){
+                        option = document.createElement("option");                    
+                        option.id = i
+                        option.textContent = data[i].name;
+                        if(data[i].name.length > 0){
+                            entities.appendChild(option);
+                        }                        
+                    }
+                    break;
+                case "bb":
+                    for(var i=0; i < data.length; i++){
+                        option = document.createElement("option");
+                        if(pars[0] == "Personnages"){
+                            option.id = data[i].char_id;
+                            option.textContent = data[i].name;
+                            if(data[i].name.length > 0){
+                                entities.appendChild(option);
+                            } 
+                        } 
+                        else if (pars[0] == "Citations"){
+                            option.id = data[i].quote_id;
+                            option.textContent = data[i].quote;
+                            if(data[i].quote.length > 0){
+                                entities.appendChild(option);
+                            }
+                        }                   
+                        else{
+                            option.id = data[i].episode_id;
+                            option.textContent = data[i].title;
+                            if(data[i].episode.length > 0){
+                                entities.appendChild(option);
+                            }
+                        }
+                        
+                                               
+                    }
+                    break;
+            }
+            apiSubForm.style.display = "block";
+    })
+}
+
+
+function displayData(){
+
+    var dispChoice = document.getElementById("dispChoice");
+    var apiOptions = document.getElementById("apiOptions"); 
+    inputs = apiOptions.getElementsByTagName("input");
+    var entities = document.getElementById("entities");
+    ent_inputs = entities.children;
+    var results = document.getElementById("results");
+    results.innerHTML = "";
+
+    pars = [];
+    url = "";
+    ent_List = [];
+
+    for(var i = 0; i < inputs.length; i++){
+        if (inputs[i].checked){
+            pars = ApiInfos[2][i];
+            url = ApiInfos[1];
+        }
+    }
+
+    var query = url + pars[1];
+
+    for(var i = 0; i < ent_inputs.length; i++){
+        if(ent_inputs[i].selected){
+            e = ent_inputs[i].id;            
+            ent_List.push(e);
+        }
+    }
+
+    if(ent_List.length <= 10){
+        if(dispChoice.selectedOptions[0].id == "table"){
+            tableDisplay(pars, query, ent_List);
+        }
+    }
+    else{
+        document.getElementById("error").style.display = "block";
+    }
+    
+}
+
+function tableDisplay(pars,query,ent_List){
+
+    var s = "[";
+    for(var i = 0; i < ent_List.length; i++){
+
+        s += "fetch('" + query + "/" + ent_List[i] + "').then(resp => resp.json())";
+        if(i < ent_List.length -1){ s += ","; }
+        else{ s += "]"; }
+    }
+
+    var results = document.getElementById("results");
+
+    Promise.all(eval(s)).then(values => { 
+
+        //title
+        title = document.createElement("h2");
+        title.classList.add("Jeu");
+        title.style.fontSize = "xx-large";
+        title.textContent = pars[1];
+        results.appendChild(title);
+
+        //table headers
+        table = document.createElement('table');
+        header = pars[2].split(',');
+        thead = document.createElement('thead');
+        tr = document.createElement('tr');
+        for(var i = 0; i < header.length; i++){
+            td = document.createElement("td");
+            td.textContent = header[i].toUpperCase();
+            tr.appendChild(td);
+        }
+        thead.appendChild(tr);
+        table.appendChild(thead);
+
+        tbody = document.createElement('tbody');
+        if(ApiInfos[0] == "bb"){
+            for(var i = 0; i < values.length; i++){
+                tr = document.createElement("tr");
+                for(var j = 0; j < header.length; j++){
+                    td = document.createElement("td");
+                    s = "values[" + i + "][0]." + header[j];
+                    td.textContent = eval(s);
+                    tr.appendChild(td);
+                }
+                tbody.appendChild(tr);
+            }
+        }
+        else{
+            for(var i = 0; i < values.length; i++){
+                tr = document.createElement("tr");
+                for(var j = 0; j < header.length; j++){
+                    td = document.createElement("td");
+                    s = "values[" + i + "]." + header[j];
+                    td.textContent = eval(s);
+                    tr.appendChild(td);
+                }
+                tbody.appendChild(tr);
+            }
+        }
+        
+        
+        table.classList.add("resTable");
+        table.appendChild(tbody);
+        results.appendChild(table);
+
+        results.style.display = "block";
+    })
+
+
+}
+   
+
+//	Draggage tableau
+
+
+const utilisateur = document.querySelector('.utilisateur');
+const box = document.querySelectorAll('.case_libre');
+
+
+
+utilisateur.addEventListener('dragstart', dragStart);
+utilisateur.addEventListener('dragend', dragEnd);
+
+
+function dragStart() {
+    this.className += ' grabbed';
+
+    setTimeout(() => (this.className = 'invisible'), 0);
+}
+
+function dragEnd() {
+    this.className = 'utilisateur';
+}
+
+
+for (const vide of box) {
+
+    vide.addEventListener('dragover', dragOver);
+
+    vide.addEventListener('dragenter', dragEnter);
+
+    vide.addEventListener('dragleave', dragLeave);
+
+    vide.addEventListener('drop', dragDrop);
+
+
+}
+
+
+
+function dragOver(e) {
+    e.preventDefault()
+
+
+}
+
+function dragEnter(e) {
+    e.preventDefault();
+    this.className += ' hover';
+}
+
+function dragLeave() {
+    this.className = 'case_libre';
+}
+
+
+function dragDrop() {
+    this.className = 'case_libre';
+    this.append(utilisateur);
+}
+
+</script>
